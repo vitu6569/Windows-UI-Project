@@ -17,7 +17,7 @@ body {
     max-width: 1920px;
     max-height: 1080px;
     height: 100vh;
-    background: no-repeat top center/cover url(Background/Desktop-light.png);
+    background: no-repeat bottom/cover url(Background/Desktop-light.png);
 }
 #taskbar {
     display: flex;
