@@ -1470,31 +1470,85 @@ body {
     line-height: 16px; /* 100% */
 }
 
-@media (min-height: 1080px){
+@media (max-height: 1080px) {
+    #taskbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        
+        height: 48px;
+        flex-shrink: 0;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--light-shell-base, url(Background/bgTaskbar.png),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
+        background-blend-mode: normal, color, luminosity;
+        
+        /* Blurs/Blur - Acrylic */
+        backdrop-filter: blur(30px);
+    }
+    
+    /* Weather */
+    #weather {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        scale: 0.75;
+        width: 141px;
+        height: 38px;
+        flex-shrink: 0;
+        margin: 5px 0 5px 13px;
+        transition: ease 0.2s;
+    }
+
+    
+    /* App icons */ 
+    #appIcons {
+        scale: 0.75;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        margin: 4px 0;
+    }
+
+    #systemTray {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px 16px 4px 0;
+        scale: 0.75;
+    }
+
     .MenuOn #startMenu.open {
-    display: flex;
-    max-width: 640px;
-
-    border-radius: 8px;
-
-    /* Light/Shadow - Shell */
-    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.15), 0px 32px 64px 0px rgba(0, 0, 0, 0.19);
+        display: flex;
+        max-width: 640px;
+        scale: 0.75;
     
-    /* Position */ 
-
-    margin: 0 auto;
-
-    position: relative;
-    top: 21%;
-
-    border-radius: 7px;
-    background: var(--light-shell-base, url(),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
-    background-blend-mode: normal, color, luminosity;
+        border-radius: 8px;
     
-    /* Blurs/Blur - Acrylic */
-    backdrop-filter: blur(30px);
+        /* Light/Shadow - Shell */
+        box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.15), 0px 32px 64px 0px rgba(0, 0, 0, 0.19);
+        
+        /* Position */ 
+    
+        margin: 0 auto;
+    
+        position: relative;
+        top: 15%;
+    
+        border-radius: 7px;
+        background: var(--light-shell-base, url(),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
+        background-blend-mode: normal, color, luminosity;
+        
+        /* Blurs/Blur - Acrylic */
+        backdrop-filter: blur(30px);
+    
+        border-radius: 7px;
+        border: 1px solid var(--light-shell-stroke, rgba(117, 117, 117, 0.40));
+    }
 
-    border-radius: 7px;
-    border: 1px solid var(--light-shell-stroke, rgba(117, 117, 117, 0.40));
-}
 }
