@@ -12,16 +12,29 @@ function MenuOn( ) {
     }
 }
 
-startMenu.addEventListener('click', () => {
-    startMenu.classList.remove('open');
-    html.classList.remove('MenuOn')
-});
+function updateClock() {
+    const timeAndDate = document.getElementById('timeAndDate')
+    const time = document.getElementById('time')
+    const date = document.getElementById('date')
+    
+    const now = new Date();
+    
+    const timeString = now.getHours() + ":" + now.getMinutes()
+    
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+    const dateString = now.toLocaleDateString(undefined, options);
+    
+    
+    time.textContent = `${timeString}`
+    date.textContent = `${dateString}`
 
-// Você também pode adicionar outra lógica para abrir o container, como quando um botão é clicado.
-// Por exemplo:
-// const abrirBotao = document.getElementById('abrirBotao');
-// abrirBotao.addEventListener('click', () => {
-//     container.classList.add('open');
-// });
+    if (timeString >= 12) {
+        time.classList.remove('day')
+    } else {
+        time.classList.add('day')
+    }
+}
 
+setInterval(updateClock, 1000)
 
+updateClock();
