@@ -308,10 +308,8 @@ body {
     box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.15), 0px 32px 64px 0px rgba(0, 0, 0, 0.19);
     
     /* Position */ 
-
-    margin: 0 auto;
-    position: relative;
-    top: 250px;
+    position: absolute;
+    bottom: 60px;
 
     border-radius: 7px;
     background: var(--light-shell-base, url(),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
