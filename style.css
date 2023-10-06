@@ -30,8 +30,8 @@
     padding: 0;
 }
 body {
-    max-width: 1920px;
-    max-height: 1080px;
+    max-width: 3840px;
+    max-height: 2400px;
     height: 100vh;
     background: no-repeat bottom/cover url(Background/Desktop-light.png) ;
 }
@@ -301,7 +301,7 @@ body {
 }
 .MenuOn #startMenu.open {
     display: flex;
-    max-width: 640px;
+    max-width: 40rem;
     border-radius: 8px;
 
     /* Light/Shadow - Shell */
@@ -310,9 +310,8 @@ body {
     /* Position */ 
 
     margin: 0 auto;
-
     position: relative;
-    top: 291px;
+    top: 250px;
 
     border-radius: 7px;
     background: var(--light-shell-base, url(),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
@@ -332,8 +331,8 @@ body {
 
 #main {
     display: flex;
-    max-width: 640px;
-    max-height: 660px;
+    max-width: 40rem;
+    max-height: 41.25rem;
     padding: 32px;
     flex-direction: column;
     align-items: center;
@@ -344,14 +343,14 @@ body {
 }
 #padding {
     display: flex;
-    max-width: 576px;
+    max-width: 36rem;
     padding: 1px 1px 9px 1px;
     justify-content: center;
     align-items: center;
 }
 #searchBox {
     display: flex;
-    max-width: 574px;
+    max-width: 35.875rem;
     max-height: 30px;
     padding: 7px 62px 7px 15px;
     align-items: center;
@@ -374,7 +373,7 @@ body {
 }
 
 #searchBox p {
-    width: 469px;
+    width: 29.3125rem;
     flex-shrink: 0;
 
     color: var(--light-colors-text-secondary, rgba(0, 0, 0, 0.61));
@@ -394,7 +393,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    max-width: 576px;
+    max-width: 36rem;
 }
 #headerOne {
     display: flex;

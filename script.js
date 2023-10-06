@@ -21,7 +21,7 @@ function updateClock() {
     
     const timeString = now.getHours() + ":" + now.getMinutes()
     
-    const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+    const options = { year: 'numeric',  day: 'numeric', month: 'numeric' };
     const dateString = now.toLocaleDateString(undefined, options);
     
     
