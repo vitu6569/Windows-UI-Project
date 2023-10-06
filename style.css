@@ -34,6 +34,9 @@ body {
     max-height: 2400px;
     height: 100vh;
     background: no-repeat bottom/cover url(Background/Desktop-light.png) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Taskbar */
@@ -41,7 +44,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     
     height: 48px;
     flex-shrink: 0;
@@ -60,6 +63,7 @@ body {
 #weather {
     display: inline-flex;
     align-items: center;
+    justify-content: start;
     gap: 12px;
 
     width: 141px;
@@ -311,6 +315,7 @@ body {
     position: absolute;
     bottom: 60px;
 
+
     border-radius: 7px;
     background: var(--light-shell-base, url(),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
     background-blend-mode: normal, color, luminosity;
@@ -321,6 +326,7 @@ body {
     border-radius: 7px;
     border: 1px solid var(--light-shell-stroke, rgba(117, 117, 117, 0.40));
 }
+
 #content {
     display: inline-flex;
     flex-direction: column;
@@ -1421,7 +1427,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 12px;
-    margin-left: 20px;
+    margin-left: 56px;
 }
 #userProfile #selectionAvatar {
     display: flex;
@@ -1464,7 +1470,7 @@ body {
 #icons {
     display: inline-flex;
     align-items: flex-start; 
-    margin-right: 20px;
+    margin-right: 52px;
 }
 #icons #selection {
     width: 30px;
