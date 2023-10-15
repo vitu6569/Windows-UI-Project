@@ -24,6 +24,15 @@
     /* Start Menu Background */
     --Light-Shell-Stroke: rgba(117, 117, 117, 0.4);
     --Light-Shell-Base: url(StartImages/background/Shell\ Base\ \(Fill\).png);
+
+    --light-colors-divider-stroke: url(Background/strokeD.svg);
+
+    --light-colors-accent-color: rgba(0, 95, 184, 1);
+
+    --Light-Control-Fill-Alt: rgba(0, 0, 0, 0.45);
+
+    --Light-Elevation-Circle-Border: url(Background/strokeborder.svg);
+    --Light-Fill-Color-Control-Solid-Default: rgba(255, 255, 255, 1);
 }   
 * {
     margin: 0;
@@ -34,9 +43,17 @@ body {
     max-height: 2400px;
     height: 100vh;
     background: no-repeat bottom/cover url(Background/Desktop-light.png) ;
+}
+.MenuOn body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.MenuOnQuickSettings body {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    box-sizing: border-box;
 }
 
 /* Taskbar */
@@ -211,7 +228,7 @@ body {
 
     fill: var(--light-colors-text-primary, rgba(0, 0, 0, 0.90));
 }
-#systemTray #quickSettings {
+#systemTray #quickSettingsTaskbar {
     display: flex;
     padding: 10px 6px;
     justify-content: center;
@@ -220,12 +237,12 @@ body {
     border-radius: 3px;
     transition: ease 0.2s;
 }
-#systemTray #quickSettings:hover {
+#systemTray #quickSettingsTaskbar:hover {
     border-radius: 4px;
     border: 1px solid var(--light-shell-taskbar-stroke, rgba(0, 0, 0, 0.06));
     background: var(--light-shell-taskbar-fill, rgba(255, 255, 255, 0.50));
 }
-#systemTray #quickSettings div {
+#systemTray #quickSettingsTaskbar div {
     display: flex;
     width: 20px;
     height: 20px;
@@ -285,8 +302,10 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 999px;
-    border: 1px solid var(--light-colors-accent-color, #005FB8);
-    background: var(--light-colors-accent-color, #005FB8);
+    background-image: url(Systemtray/icons/notification.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 #notification #badge p {
     color: var(--dark-colors-text-primary, #FFF);
@@ -317,7 +336,7 @@ body {
 
 
     border-radius: 7px;
-    background: var(--light-shell-base, url(),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
+    background: var(--light-shell-base, url(Background/Shell\ Base\ \(Fill\).png),  0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
     background-blend-mode: normal, color, luminosity;
     
     /* Blurs/Blur - Acrylic */
@@ -1507,4 +1526,637 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 100% */
+}
+
+
+/* Quick Settings */
+#quickSettingsMenu {
+   display: none;
+}
+#quickSettingsMenu.open {
+    width: 360px;
+    max-height: 586px;
+    flex-shrink: 0;
+
+    display: flex;
+    /* Position */
+    position: absolute;
+    bottom: 63px;
+    margin: 0 12px 0 0;
+
+    border-radius: 8px;
+
+    /* Light/Shadow - Shell */
+    box-shadow: 0px 2px 21px 0px rgba(0, 0, 0, 0.15), 0px 32px 64px 0px rgba(0, 0, 0, 0.19);
+
+    border-radius: 7px;
+    background: var(--light-shell-base, url(Background/Shell\ Base\ \(Fill\).png), lightgray 0% 0% / 100px 100px repeat, linear-gradient(0deg, rgba(243, 243, 243, 0.00) 0%, rgba(243, 243, 243, 0.00) 100%), rgba(243, 243, 243, 0.90));
+    background-blend-mode: normal, color, luminosity;
+    
+    /* Blurs/Blur - Acrylic */
+    backdrop-filter: blur(30px);
+}
+#quickSettingsMenu #quickSettingsContent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#quickSettingsMenu main {
+    display: flex;
+    padding: 24px 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    border-radius: 7px 7px 0px 0px;
+    background: var(--light-shell-layer, rgba(255, 255, 255, 0.25));
+}
+
+#quickSettingsMenu main #togglesSettings {
+    width: 318px;
+    height: 360px;
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--light-colors-text-primary, rgba(0, 0, 0, 0.90));
+    text-align: center;
+    font-feature-settings: 'rclt' off;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#quickSettingsMenu main #togglesSettings #column1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+#wifiSettings {
+    max-width: 98px;
+    max-height: 72px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#wifiSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/wifi.svg) center no-repeat;
+}
+#wifiSettings #wifiSettingsIcons {
+    display: flex;
+    max-width: 98px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-colors-accent-color, #005FB8);
+}
+/*Battery Saver*/
+#batterySaverSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#batterySaverSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#batterySaverSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#batterySaverSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/battery.svg) center no-repeat;
+}
+
+/*Neaby Sharing*/
+#nearbySharingSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#nearbySharingSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#nearbySharingSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-colors-accent-color, #005FB8);
+}
+#nearbySharingSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/sharing.svg) center no-repeat;
+}
+
+/*Cast*/
+#castSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#castSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#castSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#castSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/cast.svg) center no-repeat;
+}
+
+/*Column2*/
+#quickSettingsMenu main #togglesSettings #column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+#bluetoothSettings {
+    max-width: 98px;
+    max-height: 72px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#bluetoothSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/bluetooth.svg) center no-repeat;
+}
+#bluetoothSettings #bluetoothSettingsIcons {
+    display: flex;
+    max-width: 98px;
+    padding: 0px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-colors-accent-color, #005FB8);
+}
+/*Focus Assist*/
+#focusAssistSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#focusAssistSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#focusAssistSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#focusAssistSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/focus.svg) center no-repeat;
+}
+
+/*Night light*/
+#nightLightSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#nightLightSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#nightLightSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#nightLightSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/night-Light.svg) center no-repeat;
+}
+
+/*Mobile hotspot*/
+#mobileHotspotSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#mobileHotspotSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#mobileHotspotSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#mobileHotspotSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/hostpot.svg) center no-repeat;
+}
+
+/*Column3*/
+#quickSettingsMenu main #togglesSettings #column3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+}
+#airplaneModeSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#airplaneModeSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#airplaneModeSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#airplaneModeSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/AirplaneMode.svg) center no-repeat;
+}
+
+/*Accessibility*/
+#accessibilitySettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#accessibilitySettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#accessibilitySettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#accessibilitySettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/acessibility.svg) center no-repeat;
+}
+
+/*Night light*/
+#ProjectSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#ProjectSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#ProjectSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#ProjectSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/project.svg) center no-repeat;
+}
+
+/*Mobile hotspot*/
+#keyboardLayoutSettings {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+#keyboardLayoutSettingsIcons {
+    display: flex;
+    padding: 1px;
+    align-items: flex-start;
+    gap: 8px;
+}
+#keyboardLayoutSettingsContent {
+    display: flex;
+    width: 66px;
+    height: 46px;
+    padding: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    border-radius: 4px;
+    border: 1px solid var(--light-control-stroke, rgba(0, 0, 0, 0.06));
+    background: var(--light-control-fill, rgba(255, 255, 255, 0.70));
+}
+#keyboardLayoutSettingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/hostpot.svg) center no-repeat;
+}
+
+
+#quickSettingsMenu main #slidersSettings {
+    max-width: 318px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    
+    color: var(--light-colors-text-primary, rgba(0, 0, 0, 0.90));
+    text-align: center;
+    font-feature-settings: 'rclt' off;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/*brightness*/
+#slidersSettings #brightness {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+#slidersSettings #brightness #brightnessIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/sunSlider.svg) center no-repeat;
+}
+/*volume*/
+#slidersSettings #volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+#slidersSettings #volume #volumeIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/volumeIcon.svg) center no-repeat;
+}  
+
+#quickSettingsMenu footer {
+    width: 358px;
+    height: 48px;
+    
+    border-radius: 0px 0px 7px 7px;
+}
+
+#sliders form input {
+    width: 254px;
+    height: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-appearance: none;
+    appearance: none;
+
+}
+#sliders form input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #005FB8;
+    border: 4px solid #005FB8;
+    outline: 4px solid #FFF;
+    transition: border 0.5s;
+}
+
+
+
+#quickSettingsMenu footer #quickSettingsStrokeFooter {
+    width: 358px;
+    height: 0px;
+    flex-shrink: 0;
+    
+    
+    stroke-width: 1px;
+    stroke: var(--light-colors-divider-stroke, rgba(0, 0, 0, 0.08));
+}
+#quickSettingsMenu footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#contentFooterQuickSettings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 198px;
+}
+#batterySaverSettingsFooter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 7.5px 0 7.5px 12px;
+
+    width: 60px;
+    height: 32px;
+    flex-shrink: 0;
+
+    border-radius: 3px;
+
+    color: var(--light-colors-text-primary, rgba(0, 0, 0, 0.90));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+#batterySaverSettingsFooter:hover {
+    background: var(--light-control-fill-selection, rgba(0, 0, 0, 0.04));
+}
+#batteryfooter {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/baterrytwo.svg) center no-repeat;
+}
+
+#pencilAndSettings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#containerPencil {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+#containerPencil:hover {
+    background: var(--light-control-fill-selection, rgba(0, 0, 0, 0.04));
+}
+#containerPencil #pencil {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/pencil.svg) center no-repeat;
+}
+
+#containerSettings {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+#containerSettings:hover {
+    background: var(--light-control-fill-selection, rgba(0, 0, 0, 0.04));
+}
+#containerSettings #settingsIcon {
+    width: 16px;
+    height: 16px;
+    background: url(Systemtray/icons/config.svg) center no-repeat;
+}
+
+
+#chevronQuickSettings {
+    width: 12px;
+    height: 16px;
+    background: url(Systemtray/icons/Chevron.svg) center no-repeat;
+}
+#chevronQuickSettingsBlack {
+    width: 12px;
+    height: 16px;
+    background: url(Systemtray/icons/ChevronBlack.svg) center no-repeat;
 }

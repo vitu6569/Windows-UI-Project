@@ -1,349 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Windows page</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <!-- Start Menu-->
     <div id="startMenu">
-        <div id="content">
-
-    <!-- -->
-
-    <!-- Main -->
-            <main id="main">
-    <!-- Padding -->
-                <div id="padding">
-                    <div id="searchBox">
-                        <img src="StartImages/Icon.svg" alt="Magnifying glass">
-                        <p>Search for apps, settings, and documents</p>
-                    </div>
-                </div>
-    <!--Pinned Apps-->
-                <div id="pinnedApps">
-                    <div id="headerOne">
-                        <label for="allApps">
-                            <h2>Pinned</h2>
-                        </label>
-    <!-- All Apps -->
-                        <div id="allApps">
-                            <button>
-                                <p id="allAppsText">All apps</p>
-                                <p id="allAppschevron"></p>
-                            </button>
-                        </div>
-
-                    </div>
-    <!--App grid -->
-                    <div id="appGrid">
-                        <div id="rowOne">
-                            <div id="edge">
-                                <div id="edgeImg"></div>
-                                <p>Edge</p>
-                            </div>
-                                        
-                            <div id="word">
-                                <div id="wordImg"></div>
-                                <p>Word</p>
-                            </div>
-                
-                            <div id="excel">
-                                <div id="excelImg"></div>
-                                <p>Excel</p>
-                            </div>
-                
-                            <div id="powerPoint">
-                                <div id="powerPointImg"></div>
-                                <p>PowerPoint</p>
-                            </div>
-                                        
-                            <div id="outlook">
-                                <div id="outlookImg"></div>
-                                <p>Outlook</p>
-                            </div>
-                                        
-                            <div id="microsoftOffice">
-                                <div id="microsoftOfficeImg"></div>
-                                <p>Microsoft 365 (Office)</p>
-                            </div>
-                        </div>
-                
-                        <div id="rowTwo">
-                            <div id="microsoftStore">
-                                <div id="microsoftStoreImg"></div>
-                                <p>Microsoft Store</p>
-                            </div>
-                
-                            <div id="photos">
-                                <div id="photosImg"></div>
-                                <p>Photos</p>
-                            </div>
-                
-                            <div id="oneNote">
-                                <div id="oneNoteImg"></div>
-                                <p>OneNote</p>
-                            </div>
-                
-                            <div id="phoneLink">
-                                <div id="phoneLinkImg"></div>
-                                <p>Phone Link</p>
-                            </div>
-                
-                            <div id="ToDo">
-                                <div id="ToDoImg"></div>
-                                <p>To Do</p>
-                            </div>
-                
-                            <div id="whiteboard">
-                                <div id="whiteboardImg"></div>
-                                <p>Whiteboard</p>
-                            </div>
-                        </div>
-                
-                        <div id="rowThree">
-                            <div id="settings">
-                                <div id="settingsImg"></div>
-                                <p>Settings</p>
-                            </div>
-                
-                            <div id="clipchamp">
-                                <div id="clipchampImg"></div>
-                                <p>Clipchamp Video Editor</p>
-                            </div>
-                
-                            <div id="remoteDesktop">
-                                <div id="remoteDesktopImg"></div>
-                                <p>Remote Desktop</p>
-                            </div>
-                
-                            <div id="folderApps">
-                                <div id="folder">
-                                    <div id="containerImg">
-                                            <div>
-                                                <div id="netflix"></div>
-                                                <div id="mediaplayer"></div>
-                                            </div>
-                                            <div>
-                                                <div id="spotify"></div>
-                                                <div id="xbox"></div>
-                                            </div>
-                                    </div>
-                                </div>
-                                <p>Entertainment</p>
-                            </div>
-                
-                            <div id="companyPortal">
-                                <div id="companyPortalImg"></div>
-                                <p>Company Portal</p>
-                            </div>
-                
-                            <div id="windowsApp">
-                                <div id="windowsAppImg"></div>
-                                <p>Windows 365</p>
-                            </div>
-                        </div>
-
-                        <span id="pipsPager">
-                            <div id="pipsPagerImg"></div>
-                        </span>
-                    </div>
+      <div id="content">
+        <!-- Main -->
+        <main id="main">
+          <!-- Padding -->
+          <div id="padding">
+            <div id="searchBox">
+              <img src="StartImages/Icon.svg" alt="Magnifying glass" />
+              <p>Search for apps, settings, and documents</p>
+            </div>
+          </div>
+          <!--Pinned Apps-->
+          <div id="pinnedApps">
+            <div id="headerOne">
+              <label for="allApps">
+                <h2>Pinned</h2>
+              </label>
+              <!-- All Apps -->
+              <div id="allApps">
+                <button>
+                  <p id="allAppsText">All apps</p>
+                  <p id="allAppschevron"></p>
+                </button>
+              </div>
+            </div>
+            <!--App grid -->
+            <div id="appGrid">
+              <div id="rowOne">
+                <div id="edge">
+                  <div id="edgeImg"></div>
+                  <p>Edge</p>
                 </div>
 
-    <!-- Recommended -->
-                <div id="recommended">
-                    <div id="headerTwo">
-                        <label for="more">
-                            <h2>Recommended</h2>
-                        </label>
-    <!-- More -->
-                        <div id="more">
-                            <button>
-                                <p id="moreText">More</p>
-                                <p id="morechevron"></p>
-                            </button>
-                        </div>
-                    </div>
-    <!-- Grid -->
-                    <div id="grid">
-                        <div id="RowOne">
-
-                            <div id="getStarted">
-
-                                <div id="getStartedImg"></div>
-
-                                <div>
-                                    <p id="primaryText">Get Started</p>
-                                    <p id="secondaryText">Welcome to windows</p>
-                                </div>
-                            </div>
-                            
-                            <div id="pdfFile">
-                                <div id="pdfImg"></div>
-                                <div>
-                                    <p id="primaryText">Rental Agreement</p>
-                                    <p id="secondaryText">17m ago</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div id="RowTwo">
-
-                            <div id="wordFile">
-                                <div id="wordImg"></div>
-                                <div>
-                                    <p id="primaryText">Syllabus</p>
-                                    <p id="secondaryText">2h ago</p>
-                                </div>
-                                
-                            </div>
-
-                            <div id="pdfFile">
-                                <div id="pdfImg"></div>
-                                <div>
-                                    <p id="primaryText">Logo Ideas</p>
-                                    <p id="secondaryText">12h ago</p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div id="RowThree">
-                                <div id="powerpointFile">
-                                    <div id="powerpointImg"></div>
-                                    <div>
-                                        <p id="primaryText">Tournament Photos</p>
-                                        <p id="secondaryText">Yesterday at 4:20 PM</p>
-                                    </div>
-                                </div>
-    
-                                <div id="excelFile">
-                                    <div id="excelImg"></div>
-                                    <div>
-                                        <p id="primaryText">Timetable</p>
-                                        <p id="secondaryText">Yesterday at 1:15 PM</p>
-                                    </div>
-                                </div>
-                        </div>
-
-                    </div>
-
+                <div id="word">
+                  <div id="wordImg"></div>
+                  <p>Word</p>
                 </div>
+
+                <div id="excel">
+                  <div id="excelImg"></div>
+                  <p>Excel</p>
+                </div>
+
+                <div id="powerPoint">
+                  <div id="powerPointImg"></div>
+                  <p>PowerPoint</p>
+                </div>
+
+                <div id="outlook">
+                  <div id="outlookImg"></div>
+                  <p>Outlook</p>
+                </div>
+
+                <div id="microsoftOffice">
+                  <div id="microsoftOfficeImg"></div>
+                  <p>Microsoft 365 (Office)</p>
+                </div>
+              </div>
+
+              <div id="rowTwo">
+                <div id="microsoftStore">
+                  <div id="microsoftStoreImg"></div>
+                  <p>Microsoft Store</p>
+                </div>
+
+                <div id="photos">
+                  <div id="photosImg"></div>
+                  <p>Photos</p>
+                </div>
+
+                <div id="oneNote">
+                  <div id="oneNoteImg"></div>
+                  <p>OneNote</p>
+                </div>
+
+                <div id="phoneLink">
+                  <div id="phoneLinkImg"></div>
+                  <p>Phone Link</p>
+                </div>
+
+                <div id="ToDo">
+                  <div id="ToDoImg"></div>
+                  <p>To Do</p>
+                </div>
+
+                <div id="whiteboard">
+                  <div id="whiteboardImg"></div>
+                  <p>Whiteboard</p>
+                </div>
+              </div>
+
+              <div id="rowThree">
+                <div id="settings">
+                  <div id="settingsImg"></div>
+                  <p>Settings</p>
+                </div>
+
+                <div id="clipchamp">
+                  <div id="clipchampImg"></div>
+                  <p>Clipchamp Video Editor</p>
+                </div>
+
+                <div id="remoteDesktop">
+                  <div id="remoteDesktopImg"></div>
+                  <p>Remote Desktop</p>
+                </div>
+
+                <div id="folderApps">
+                  <div id="folder">
+                    <div id="containerImg">
+                      <div>
+                        <div id="netflix"></div>
+                        <div id="mediaplayer"></div>
+                      </div>
+                      <div>
+                        <div id="spotify"></div>
+                        <div id="xbox"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>Entertainment</p>
+                </div>
+
+                <div id="companyPortal">
+                  <div id="companyPortalImg"></div>
+                  <p>Company Portal</p>
+                </div>
+
+                <div id="windowsApp">
+                  <div id="windowsAppImg"></div>
+                  <p>Windows 365</p>
+                </div>
+              </div>
+
+              <span id="pipsPager">
+                <div id="pipsPagerImg"></div>
+              </span>
+            </div>
+          </div>
+
+          <!-- Recommended -->
+          <div id="recommended">
+            <div id="headerTwo">
+              <label for="more">
+                <h2>Recommended</h2>
+              </label>
+              <!-- More -->
+              <div id="more">
+                <button>
+                  <p id="moreText">More</p>
+                  <p id="morechevron"></p>
+                </button>
+              </div>
+            </div>
+            <!-- Grid -->
+            <div id="grid">
+              <div id="RowOne">
+                <div id="getStarted">
+                  <div id="getStartedImg"></div>
+
+                  <div>
+                    <p id="primaryText">Get Started</p>
+                    <p id="secondaryText">Welcome to windows</p>
+                  </div>
+                </div>
+
+                <div id="pdfFile">
+                  <div id="pdfImg"></div>
+                  <div>
+                    <p id="primaryText">Rental Agreement</p>
+                    <p id="secondaryText">17m ago</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="RowTwo">
+                <div id="wordFile">
+                  <div id="wordImg"></div>
+                  <div>
+                    <p id="primaryText">Syllabus</p>
+                    <p id="secondaryText">2h ago</p>
+                  </div>
+                </div>
+
+                <div id="pdfFile">
+                  <div id="pdfImg"></div>
+                  <div>
+                    <p id="primaryText">Logo Ideas</p>
+                    <p id="secondaryText">12h ago</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="RowThree">
+                <div id="powerpointFile">
+                  <div id="powerpointImg"></div>
+                  <div>
+                    <p id="primaryText">Tournament Photos</p>
+                    <p id="secondaryText">Yesterday at 4:20 PM</p>
+                  </div>
+                </div>
+
+                <div id="excelFile">
+                  <div id="excelImg"></div>
+                  <div>
+                    <p id="primaryText">Timetable</p>
+                    <p id="secondaryText">Yesterday at 1:15 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <!-- Footer -->
+        <div id="footer">
+          <div id="userProfile">
+            <div id="selectionAvatar">
+              <div id="avatarImg">
+                <div></div>
+              </div>
+              <p>Brooklyn Simmons</p>
+            </div>
+          </div>
+
+          <div id="icons">
+            <div id="powerbutton">
+              <div id="selection">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Settings -->
+    <div id="quickSettingsMenu">
+        <div id="quickSettingsContent">
+            <main>
+              <div id="togglesSettings">
+                <div id="column1">
+                  <!--Wifi Settings-->
+                  <div id="wifiSettings">
+                    <div id="wifiSettingsIcons">
+                      <div id="wifiSettingsIcon"></div>
+                      <img src="Systemtray/icons/division.svg" alt="" draggable="false">
+                      <div id="chevronQuickSettings"></div>
+                    </div>
+                    <p>MSFTCORP</p>
+                  </div>
+                  <!--Battery saver-->
+                  <div id="batterySaverSettings">
+                    <div id="batterySaverSettingsIcons">
+                      <div id="batterySaverSettingsContent">
+                        <div id="batterySaverSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Battery saver</p>
+                  </div>
+                  <!--Nearby sharing-->
+                  <div id="nearbySharingSettings">
+                    <div id="nearbySharingSettingsIcons">
+                      <div id="nearbySharingSettingsContent">
+                        <div id="nearbySharingSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Nearby sharing</p>
+                  </div>
+                  <!--Cast-->
+                  <div id="castSettings">
+                    <div id="castSettingsIcons">
+                      <div id="castSettingsContent">
+                        <div id="castSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Cast</p>
+                  </div>
+                </div>
+
+                <div id="column2">
+                  <!--bluetooth Settings-->
+                  <div id="bluetoothSettings">
+                    <div id="bluetoothSettingsIcons">
+                      <div id="bluetoothSettingsIcon"></div>
+                      <img src="Systemtray/icons/division.svg" alt="" draggable="false">
+                      <div id="chevronQuickSettings"></div>
+                    </div>
+                    <p>Bluetooth</p>
+                  </div>
+                  <!--Focus Assist-->
+                  <div id="focusAssistSettings">
+                    <div id="focusAssistSettingsIcons">
+                      <div id="focusAssistSettingsContent">
+                        <div id="focusAssistSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Focus Assist</p>
+                  </div>
+                  <!--Night light-->
+                  <div id="nightLightSettings">
+                    <div id="nightLightSettingsIcons">
+                      <div id="nightLightSettingsContent">
+                        <div id="nightLightSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Night light</p>
+                  </div>
+                  <!--Mobile hotspot-->
+                  <div id="mobileHotspotSettings">
+                    <div id="mobileHotspotSettingsIcons">
+                      <div id="mobileHotspotSettingsContent">
+                        <div id="mobileHotspotSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Mobile hotspot</p>
+                  </div>
+                </div>
+                
+                <div id="column3">
+                  <!--Airplane Mode Settings-->
+                  <div id="airplaneModeSettings">
+                    <div id="airplaneModeSettingsIcons">
+                      <div id="airplaneModeSettingsContent">
+                        <div id="airplaneModeSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Airplane mode</p>
+                  </div>
+                  <!--Accessibility-->
+                  <div id="accessibilitySettings">
+                    <div id="accessibilitySettingsIcons">
+                      <div id="accessibilitySettingsContent">
+                        <div id="accessibilitySettingsIcon"></div>
+                        <div id="chevronQuickSettingsBlack"></div>
+                      </div>
+                    </div>
+                    <p>Accessibility</p>
+                  </div>
+                  <!--Project-->
+                  <div id="ProjectSettings">
+                    <div id="ProjectSettingsIcons">
+                      <div id="ProjectSettingsContent">
+                        <div id="ProjectSettingsIcon"></div>
+                      </div>
+                    </div>
+                    <p>Project</p>
+                  </div>
+                  <!--Keyboard Layout-->
+                  <div id="keyboardLayoutSettings">
+                    <div id="keyboardLayoutSettingsIcons">
+                      <div id="keyboardLayoutSettingsContent">
+                        <div id="KeyboardLayoutSettingsIcon"></div>
+                        <div id="chevronQuickSettingsBlack"></div>
+                      </div>
+                    </div>
+                    <p>Keyboard layout</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="slidersSettings">
+
+                <div id="brightness">
+                    <div id="brightnessIcon"></div>
+
+                  <div id="sliders">
+                    <form action="">
+                      <input type="range" min="0" max="100" step="1" id="slidersInput" onchange="slider()">
+                      <output name="val" for="slidersInput"></output>
+                    </form>
+                  </div>
+                </div>
+
+                <div id="volume">
+                    <div id="volumeIcon"></div>
+
+                    <div id="sliders">
+                      <form action="">
+                        <input type="range" min="0" max="100" step="1" id="slidersInput" onchange="slider()">
+                        <output name="val" for="slidersInput"></output>
+                      </form>
+                    </div>
+                  <div id="chevronQuickSettingsBlack"></div>
+                </div>
+                
+              </div>
+              
             </main>
 
-    <!-- Footer -->
-                <div id="footer">
-                    
-                    <div id="userProfile">
-                        <div id="selectionAvatar">
-                            <div id="avatarImg">
-                                <div></div>
-                            </div>
-                            <p>Brooklyn Simmons</p>
-                        </div>
-                    </div>
-
-                    <div id="icons">
-                        <div id="powerbutton">
-                            <div id="selection">
-                                <p></p>
-                            </div>
-                        </div>
-                    </div>
+            <footer id="quickSettingsStrokeFooter">
+              <div id="contentFooterQuickSettings">
+                <div id="batterySaverSettingsFooter">
+                  <div id="batteryfooter"></div>
+                  <p>92%</p>
                 </div>
-
+  
+                <div id="pencilAndSettings">
+                  <div id="containerPencil">
+                    <div id="pencil"></div>
+                  </div>
+  
+                  <div id="containerSettings">
+                    <div id="settingsIcon"></div>
+                  </div>
+                </div>
+              </div>
+            </footer>
         </div>
-
     </div>
+
     <!-- Taskbar -->
     <footer id="taskbar">
-        <!-- Weather -->
-        <div id="weather">
-            <span id="sun"></span>
-            <span id="textTS">
-                <p id="temperature">24°C</p>
-                <p id="sunny">Sunny</p>
-            </span>
+      <!-- Weather -->
+      <div id="weather">
+        <span id="sun"></span>
+        <span id="textTS">
+          <p id="temperature">24°C</p>
+          <p id="sunny">Sunny</p>
+        </span>
+      </div>
+      <!-- App Icons -->
+      <div id="appIcons">
+        <!-- Start -->
+        <div id="start" onclick="MenuOn()">
+          <button></button>
         </div>
-        <!-- App Icons -->
-        <div id="appIcons">
-            <!-- Start -->
-            <div id="start" onclick="MenuOn()">
-                <button>
-                    
-                </button>
-            </div>
-            <!-- Search -->
-            <div id="searchContainer">
+        <!-- Search -->
+        <div id="searchContainer">
+          <label for="illustration" id="searchLabel">
+            <img src="AppIcons/Union.png" alt="Union" />
+            <p id="search">Search</p>
+          </label>
 
-                <label for="illustration" id="searchLabel">
-                    <img src="AppIcons/Union.png" alt="Union">
-                    <p id="search">Search</p>
-                </label>
-
-                <img src="AppIcons/Illustration.png" alt="illustration" id="illustration">
-            </div>
-            <!-- Apps taskbar-->
-            <div id="appsTaskbar">
-                <!-- Task View -->
-                <span id="taskView">
-                    <img src="AppIcons/task -view.png" alt="task view" width="24px">
-                </span>
-                <!-- Chat -->
-                <span id="chat">
-                    <img src="AppIcons/chat.png" alt="chat">
-                </span>
-                <!-- File explore -->
-                <span id="file">
-                    <img src="AppIcons/Explorer.png" alt="file explorer">
-                </span>
-                <!-- Edge -->
-                <span id="edge">
-                    <img src="AppIcons/edge.png" alt="Edge">
-                </span>
-                <!-- Store -->
-                <span id="store">
-                    <img src="AppIcons/store.png" alt="Store">
-                </span>
-            </div>
+          <img
+            src="AppIcons/Illustration.png"
+            alt="illustration"
+            id="illustration"
+          />
         </div>
-        <!-- System tray-->
-        <div id="systemTray">
-            <div id="overflow">
-                <img src="Systemtray/Shape.png" alt="overflow">
-            </div>
+        <!-- Apps taskbar-->
+        <div id="appsTaskbar">
+          <!-- Task View -->
+          <span id="taskView">
+            <img src="AppIcons/task -view.png" alt="task view" width="24px" />
+          </span>
+          <!-- Chat -->
+          <span id="chat">
+            <img src="AppIcons/chat.png" alt="chat" />
+          </span>
+          <!-- File explore -->
+          <span id="file">
+            <img src="AppIcons/Explorer.png" alt="file explorer" />
+          </span>
+          <!-- Edge -->
+          <span id="edge">
+            <img src="AppIcons/edge.png" alt="Edge" />
+          </span>
+          <!-- Store -->
+          <span id="store">
+            <img src="AppIcons/store.png" alt="Store" />
+          </span>
+        </div>
+      </div>
+      <!-- System tray-->
+      <div id="systemTray">
+        <div id="overflow">
+          <img src="Systemtray/Shape.png" alt="overflow" />
+        </div>
         <!-- Quick settings-->
-            <div id="quickSettings">
-                <div id="wifi"><img src="Systemtray/WiFi.png" alt="WiFi"></div>
-                <div id="speaker"><img src="Systemtray/Speaker.png" alt="Speaker"></div>
-                <div id="battery"><img src="Systemtray/Battery.png" alt="Battery"></div>
-            </div>
+        <div id="quickSettingsTaskbar" onclick="MenuOnQuickSettings()">
+          <div id="wifi"><img src="Systemtray/WiFi.png" alt="WiFi" /></div>
+          <div id="speaker">
+            <img src="Systemtray/Speaker.png" alt="Speaker" />
+          </div>
+          <div id="battery">
+            <img src="Systemtray/Battery.png" alt="Battery" />
+          </div>
+        </div>
         <!-- Clock -->
         <div id="clock" class="day">
-            <!-- Make changes -->
-            <div id="timeAndDate">
-                <div id="time">
-                    00:00
-                </div>
-                <div id="date">
-                    
-                </div>
+          <!-- Make changes -->
+          <div id="timeAndDate">
+            <div id="time">00:00</div>
+            <div id="date"></div>
+          </div>
+          <div id="notification">
+            <div id="badge">
+              <p></p>
             </div>
-            <div id="notification">
-                <div id="badge">
-                    <p>5</p>
-                </div>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </footer>
 
-    <script src="script.js">
-
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
