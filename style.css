@@ -281,12 +281,6 @@ body {
     font-weight: 400;
     line-height: normal;
 }
-#time.day::after {
-    content: " AM";
-}
-#time::after {
-    content: " PM";
-}
 #notification {
     display: flex;
     padding: 0 2px 0 10px;

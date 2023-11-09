@@ -34,28 +34,25 @@ function MenuOnQuickSettings() {
 
 
 function updateClock() {
-    const timeAndDate = document.getElementById('timeAndDate')
-    const time = document.getElementById('time')
-    const date = document.getElementById('date')
+    const timeAndDate = document.getElementById('timeAndDate');
+    const time = document.getElementById('time');
+    const date = document.getElementById('date');
     
     const now = new Date();
     
-    const timeString = now.getHours() + ":" + now.getMinutes()
-    
-    const options = { year: 'numeric',  day: 'numeric', month: 'numeric' };
-    const dateString = now.toLocaleDateString(undefined, options);
-    
-    
-    time.textContent = `${timeString}`
-    date.textContent = `${dateString}`
+    // Obtenha o horário no formato americano (12 horas, AM/PM)
+    const timeString = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
-    if (timeString <= 6) {
-        time.classList.remove('day')
-    } else if (timeString >= 12) {
-        time.classList.add('day')
-    }
+    // Obtenha a data no formato americano (mês/dia/ano)
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+    const dateString = now.toLocaleDateString('en-US', options);
+    
+    time.textContent = `${timeString}`;
+    date.textContent = `${dateString}`;
+
 }
 
-setInterval(updateClock, 1000)
+setInterval(updateClock, 1000);
 
 updateClock();
+
