@@ -56,3 +56,20 @@ setInterval(updateClock, 1000);
 
 updateClock();
 
+// GET API
+fetch('https://api.weatherapi.com/v1/forecast.json?key=a3821ce7915048e09b1200451231311&q=Oslo&days=1&aqi=yes&alerts=yes')
+    .then(response => response.json())
+    .then(data => {
+        let iconUrl = 'https:' + data.current.condition.icon;
+        document.getElementById('iconWeather').src = iconUrl;
+
+        const temperature = document.getElementById('temperature')
+        temperature.innerHTML = data['current']['temp_c'] + '°C'
+
+        const textCondition = document.getElementById("sunny");
+        text_code = data['current']['condition']['text']
+        textCondition.innerHTML = text_code;
+    })
+    .catch(error => {
+        console.error('Erro ao chamar a API', error);
+    });

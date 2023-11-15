@@ -97,9 +97,12 @@ body {
 }
 #sun {
     padding: 9px 0 9px 7px;
-    background: no-repeat center url(Weathericons/Sun.png);
-    width: 20px;
-    height: 20px;
+    background-size: 120%;
+    width: 16px;
+    height: 16px;
+}
+#iconWeather {
+    width: 24px;
 }
 #temperature {
     color: var(--light-colors-text-primary, rgba(0, 0, 0, 0.90));
