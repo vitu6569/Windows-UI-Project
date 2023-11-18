@@ -73,3 +73,7 @@ fetch('https://api.weatherapi.com/v1/forecast.json?key=a3821ce7915048e09b1200451
     .catch(error => {
         console.error('Erro ao chamar a API', error);
     });
+
+function rotateAnimation() {
+    
+}

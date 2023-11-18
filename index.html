@@ -400,12 +400,7 @@
             </main>
 
             <footer id="quickSettingsStrokeFooter">
-              <div id="contentFooterQuickSettings">
-                <div id="batterySaverSettingsFooter">
-                  <div id="batteryfooter"></div>
-                  <p>92%</p>
-                </div>
-  
+              <div id="contentFooterQuickSettings">  
                 <div id="pencilAndSettings">
                   <div id="containerPencil">
                     <div id="pencil"></div>
@@ -476,16 +471,13 @@
       <!-- System tray-->
       <div id="systemTray">
         <div id="overflow">
-          <img src="Systemtray/Shape.png" alt="overflow" />
+          <img src="Systemtray/Shape.png" alt="overflow" onclick="rotateAnimation()"/>
         </div>
         <!-- Quick settings-->
         <div id="quickSettingsTaskbar" onclick="MenuOnQuickSettings()">
           <div id="wifi"><img src="Systemtray/WiFi.png" alt="WiFi" /></div>
           <div id="speaker">
             <img src="Systemtray/Speaker.png" alt="Speaker" />
-          </div>
-          <div id="battery">
-            <img src="Systemtray/Battery.png" alt="Battery" />
           </div>
         </div>
         <!-- Clock -->
