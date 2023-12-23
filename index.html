@@ -7,7 +7,8 @@
 
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="body">
+    
     <!-- Start Menu-->
     <div id="startMenu">
       <div id="content">
@@ -230,7 +231,7 @@
               <div id="avatarImg">
                 <div></div>
               </div>
-              <p>Brooklyn Simmons</p>
+              <p>User</p>
             </div>
           </div>
 
@@ -242,6 +243,141 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Searchbox-->
+    <div id="searchMenu">
+      <div id="searchContent"> 
+      <!-- Recents -->
+      <div id="recents">
+        <div id="recentHeadingContent">
+          <p id="recentText">Recent</p>
+        </div>
+        <div id="searchApps">
+
+          <div id="getStartedSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/getstarted.png" alt="get started">
+            <p>Get Started</p>
+          </div>
+
+          <div id="photosSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/photos.png" alt="photos">
+            <p>Photos</p>
+          </div>
+          
+          <div id="edgeSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/edge.png" alt="edge">
+            <p>Microsoft Edge</p>
+          </div>
+
+          <div id="wordFileSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/word.png" alt="word file">
+            <p>April Reading Book Club</p>
+          </div>
+
+          <div id="storeSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/store.png" alt="store">
+            <p>Microsoft Store</p>
+          </div>
+
+          <div id="settingsSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/settings.png" alt="settings">
+            <p>Settings</p>
+          </div>
+
+          <div id="powerpointSearchContainer" class="searchRecentsapps">
+            <img src="searchbox/firtspart/powerpoint.png" alt="Family file">
+            <p>Family Reunion</p>
+          </div>
+
+          <div id="wordAppSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/wordappIcon.png" alt="word">
+            <p>Word</p>
+          </div>
+
+          <div id="paintSearchApps" class="searchRecentsapps">
+            <img src="searchbox/firtspart/paint.png" alt="paint">
+            <p>Paint</p>
+          </div>
+        </div>
+      </div>
+      <!-- Search Highlights -->
+      <div id="searchHighlights">
+        
+        <div id="searchHeading">
+          <div>
+            <p id="todayApril">Today • April 22</p>
+          </div>
+        
+          <div id="fourIcons">
+            <div id="iconRewards" class="interaction">
+              <img src="searchbox/secondpart/icon/Icon.png" alt="" id="Rewards">
+            </div>
+            <div id="userIcon" class="interaction">
+              <img id="userLetter" src="StartImages/footer/avatar.png" alt="">
+            </div>
+            <div id="more" class="interaction">
+              <img src="searchbox/secondpart/icon/more.png" alt="" id="moreIcon">
+            </div>
+            <div id="bing" class="interaction">
+              <img src="searchbox/secondpart/icon/Bing.png" alt="" id="bingIcon">
+            </div>
+          </div>
+        </div>
+
+        <div id="cards">
+          <div id="largeCard">
+            <p>Earth Day</p>
+          </div>
+  
+          <div id="threeCards">
+            <div id="firstCard">
+              <img src="searchbox/secondpart/cards/secondImg.png" alt="">
+              <p>Outdoors activities nearby</p>
+            </div>
+  
+            <div id="secondCard">
+              <img src="searchbox/secondpart/cards/thirdImg.png" alt="">
+              <p>On this day: 1970</p>
+            </div>
+  
+            <div id="thirdCard">
+              <img src="searchbox/secondpart/cards/fourthImg.png" alt="">
+              <p>Give with Bing</p>
+            </div>
+          </div>
+  
+          <div id="trendingContainer">
+            <div id="titleTrending">
+              <div id="imgSearch"></div>
+              <p>Trending searches</p>
+            </div>
+  
+            <div id="trendingsNames">
+              <div id="firstTrendings">
+                <div id="OneT">
+                  <p>soccer games</p>
+                </div>
+                <div id="TwoT">
+                  <p>largest flier fossil</p>
+                </div>
+                <div id="ThreeT">
+                  <p>april showers</p>
+                </div>
+                
+              </div>
+              <div id="secondaryTrendings">
+                <div id="FourT">mother's day</div>
+                <div id="FiveT">flight delays</div>
+                <div id="SixT">earth day facts</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+      </div>
       </div>
     </div>
 
@@ -433,16 +569,7 @@
         </div>
         <!-- Search -->
         <div id="searchContainer">
-          <label for="illustration" id="searchLabel">
-            <img src="AppIcons/Union.png" alt="Union" />
-            <p id="search">Search</p>
-          </label>
-
-          <img
-            src="AppIcons/Illustration.png"
-            alt="illustration"
-            id="illustration"
-          />
+            <input type="search" id="search" placeholder="Search" onclick="MenuOnSearchContainer()">
         </div>
         <!-- Apps taskbar-->
         <div id="appsTaskbar">

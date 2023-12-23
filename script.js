@@ -1,8 +1,11 @@
 const html = document.documentElement
 const startMenu = document.getElementById("startMenu")
 const MenuQuickSettings = document.getElementById("quickSettingsMenu")
+const SearchMenu = document.getElementById("searchMenu")
+const overflow = document.getElementById("overflow")
+const body = document.getElementById("body")
 
-function MenuOn( ) {
+function MenuOn() {
     
     if (html.classList.contains("MenuOn")) {
         html.classList.remove("MenuOn")
@@ -10,13 +13,14 @@ function MenuOn( ) {
     } else {
         html.classList.add("MenuOn")
         startMenu.classList.add('open')
-    }
+    };
     if (html.classList.contains("MenuOn")) {
         html.classList.remove("MenuOnQuickSettings")
         MenuQuickSettings.classList.remove("open")
-    }
+        html.classList.remove("MenuOnSearchContainer")
+        SearchMenu.classList.remove("open")
+    };
 }
-
 
 function MenuOnQuickSettings() {
     if (html.classList.contains("MenuOnQuickSettings")) {
@@ -25,10 +29,28 @@ function MenuOnQuickSettings() {
     } else {
         html.classList.add("MenuOnQuickSettings")
         MenuQuickSettings.classList.add("open")
-    }
+    };
     if (html.classList.contains("MenuOnQuickSettings")) {
         html.classList.remove("MenuOn")
         startMenu.classList.remove("open")
+        html.classList.remove("MenuOnSearchContainer")
+        SearchMenu.classList.remove("open")
+    }
+}
+
+function MenuOnSearchContainer() {
+    if (html.classList.contains("MenuOnSearchContainer")) {
+        html.classList.remove("MenuOnSearchContainer")
+        SearchMenu.classList.remove("open")
+    } else {
+        html.classList.add("MenuOnSearchContainer")
+        SearchMenu.classList.add("open")
+    };
+    if (html.classList.contains("MenuOnSearchContainer")) {
+        html.classList.remove("MenuOn")
+        startMenu.classList.remove("open")
+        html.classList.remove("MenuOnQuickSettings")
+        MenuQuickSettings.classList.remove("open")
     }
 }
 
