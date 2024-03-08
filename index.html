@@ -315,7 +315,7 @@
               <img src="searchbox/secondpart/icon/Icon.png" alt="" id="Rewards">
             </div>
             <div id="userIcon" class="interaction">
-              <img id="userLetter" src="StartImages/footer/avatar.png" alt="">
+              <div id="userLetter"></div>
             </div>
             <div id="more" class="interaction">
               <img src="searchbox/secondpart/icon/more.png" alt="" id="moreIcon">
@@ -551,10 +551,123 @@
         </div>
     </div>
 
+    <!--notification-->
+    <div id="notificationsMenu">
+        <div id="notificationBox">
+          <div id="title">
+            <p>Notifications</p>
+            <div id="bellIcon">
+
+            </div>
+          </div>
+          <div id="notifications">
+            <p>No new notifications</p>
+          </div>
+        </div>
+
+        <div id="calendarBox">
+          <div id="calendarTitle">
+            <p>Tuesday, September 26</p>
+            <div id="imgdown"></div>
+          </div>
+          <div id="calendar">
+            <div id="months">
+              <p>September 2023</p>
+
+              <div id="changeMonth">
+                <button id="buttonUp"></button>
+                <button id="buttonDown"></button>
+              </div>
+            </div>
+
+            <div id="calenderlinkDivApi">
+              <img src="notifications/Days of the week.svg" alt="">
+              <img src="notifications/Days.svg" alt="">
+            </div>
+
+            <footer>
+              <div id="timer">
+                <button id="negative"><img src="notifications/negativeIcon.svg" alt=""></button>
+                <p> <span id="black">30</span> mins</p>
+                <button id="plus"><img src="notifications/plus.svg" alt=""></button>
+              </div>
+
+              <div id="focus">
+                <div id="play"></div>
+                <p>Focus</p>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+    </div>
+    
+    <div id="widgetsMenu">
+      <div id="widgetsHeader">
+        <div id="DateHeader">
+            <p id="monthAndDay">September 26</p>
+            <p id="timeMSG">Good morning</p>
+        </div>
+        
+        <div id="widgetsHeaderIcons">
+          <div id="reload"></div>
+          <div id="expand"></div>
+          <div id="widgetsUserIcon"></div>
+        </div>
+      </div>
+
+      <div id="widgetsContent">
+
+        <div id="widgets">
+
+          <div id="widgetsIcon">
+            <p>Widgets</p>
+            <div id="plusWidgets"></div>
+          </div>
+
+          <div id="pinWidgets">
+            <div id="widgetWeather"></div>
+            <div id="widgetWatchlist"></div>
+            <div id="widgetMaps"></div>
+            <div id="widgetOutlookCalender"></div>
+          </div>
+
+        </div>
+
+        <div id="news">
+          <div id="headerNews">
+            <p class="changePage" id="discover">Discover</p>
+            <p class="changePage">Following</p>
+            <p class="changePage">Watch</p>
+            <p class="changePage">Play</p>
+          </div>
+
+          <div id="newsContent">
+            
+            <div id="threeNews">
+              <div id="notiOne"></div>
+              <div id="TwoNotiInContainer">
+                <div id="notiTwo"></div>
+                <div id="notiThree"></div>
+              </div>
+            </div>
+
+            <div id="twoNews">
+              <div id="notiFour"></div>
+              <div id="notiFive"></div>
+            </div>
+
+            <div id="OneNews"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <!-- Taskbar -->
     <footer id="taskbar">
       <!-- Weather -->
-      <div id="weather">
+      <div id="weather" onclick="MenuOnWidgets()">
         <span id="sun"><img src="Weathericons/Sun.png" alt="" id="iconWeather"></span>
         <span id="textTS">
           <p id="temperature">24°C</p>
@@ -608,7 +721,7 @@
           </div>
         </div>
         <!-- Clock -->
-        <div id="clock" class="day">
+        <div id="clock" class="day" onclick="MenuNotificationsOn()">
           <!-- Make changes -->
           <div id="timeAndDate">
             <div id="time">00:00</div>

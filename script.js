@@ -2,6 +2,8 @@ const html = document.documentElement
 const startMenu = document.getElementById("startMenu")
 const MenuQuickSettings = document.getElementById("quickSettingsMenu")
 const SearchMenu = document.getElementById("searchMenu")
+const NotificationsMenu = document.getElementById("notificationsMenu")
+const MenuWidgets = document.getElementById("widgetsMenu")
 const overflow = document.getElementById("overflow")
 const body = document.getElementById("body")
 
@@ -19,7 +21,12 @@ function MenuOn() {
         MenuQuickSettings.classList.remove("open")
         html.classList.remove("MenuOnSearchContainer")
         SearchMenu.classList.remove("open")
+        html.classList.remove("MenuNotificationsOn")
+        NotificationsMenu.classList.remove("open")
+        html.classList.remove("MenuOnWidgets")
+        MenuWidgets.classList.remove("open")
     };
+    
 }
 
 function MenuOnQuickSettings() {
@@ -35,6 +42,10 @@ function MenuOnQuickSettings() {
         startMenu.classList.remove("open")
         html.classList.remove("MenuOnSearchContainer")
         SearchMenu.classList.remove("open")
+        html.classList.remove("MenuNotificationsOn")
+        NotificationsMenu.classList.remove("open")
+        html.classList.remove("MenuOnWidgets")
+        MenuWidgets.classList.remove("open")
     }
 }
 
@@ -51,9 +62,52 @@ function MenuOnSearchContainer() {
         startMenu.classList.remove("open")
         html.classList.remove("MenuOnQuickSettings")
         MenuQuickSettings.classList.remove("open")
+        html.classList.remove("MenuNotificationsOn")
+        NotificationsMenu.classList.remove("open")
+        html.classList.remove("MenuOnWidgets")
+        MenuWidgets.classList.remove("open")
     }
 }
 
+function MenuNotificationsOn() {
+    if (html.classList.contains("MenuNotificationsOn")) {
+        html.classList.remove("MenuNotificationsOn")
+        NotificationsMenu.classList.remove("open")
+    } else {
+        html.classList.add("MenuNotificationsOn")
+        NotificationsMenu.classList.add("open")
+    };
+    if (html.classList.contains("MenuNotificationsOn")) {
+        html.classList.remove("MenuOn")
+        startMenu.classList.remove("open")
+        html.classList.remove("MenuOnQuickSettings")
+        MenuQuickSettings.classList.remove("open")
+        html.classList.remove("MenuOnSearchContainer")
+        SearchMenu.classList.remove("open")
+        html.classList.remove("MenuOnWidgets")
+        MenuWidgets.classList.remove("open")
+    }
+}
+
+function MenuOnWidgets() {
+    if (html.classList.contains("MenuOnWidgets")) {
+        html.classList.remove("MenuOnWidgets")
+        MenuWidgets.classList.remove("open")
+    } else {
+        html.classList.add("MenuOnWidgets")
+        MenuWidgets.classList.add("open")
+    };
+    if (html.classList.contains("MenuOnWidgets")) {
+        html.classList.remove("MenuOn")
+        startMenu.classList.remove('open')
+        html.classList.remove("MenuOnQuickSettings")
+        MenuQuickSettings.classList.remove("open")
+        html.classList.remove("MenuOnSearchContainer")
+        SearchMenu.classList.remove("open")
+        html.classList.remove("MenuNotificationsOn")
+        NotificationsMenu.classList.remove("open")
+    }
+}
 
 function updateClock() {
     const timeAndDate = document.getElementById('timeAndDate');
